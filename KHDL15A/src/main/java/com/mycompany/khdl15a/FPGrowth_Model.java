@@ -11,6 +11,7 @@ import weka.core.converters.ConverterUtils;
 import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.NominalToBinary;
 import weka.filters.unsupervised.attribute.NumericToNominal;
+import weka.filters.unsupervised.attribute.RemoveByName;
 
 /**
  *
@@ -31,11 +32,12 @@ public class FPGrowth_Model {
         this.fpgrowth = new FPGrowth();
     }
     public void mine_AR(String model_opt, String data_opt) throws Exception{
-        this.new_data = convertNumericToNorminal(dataset, data_opt);
+        //this.new_data = convertNumericToNorminal(dataset, data_opt);
         this.model_option = weka.core.Utils.splitOptions(model_opt); // tachs thuoc tinh
+        this.new_data = removeByName(data_opt);
         fpgrowth.setOptions(model_option);// set tham so
         fpgrowth.buildAssociations(new_data); // built thuat toan
-    }
+    }   
     public Instances convertNumericToNorminal(Instances data ,String data_opt) throws Exception{
         this.data_option = weka.core.Utils.splitOptions(data_opt);
         NumericToNominal num_to_nominal = new NumericToNominal();
@@ -49,9 +51,17 @@ public class FPGrowth_Model {
         num_to_binary.setOptions(data_option);
         return Filter.useFilter(data, num_to_binary);
     }
+    public Instances removeByName(String data_opt) throws Exception{
+        this.data_option = weka.core.Utils.splitOptions(data_opt);
+        RemoveByName rm = new RemoveByName();
+        rm.setOptions(data_option);
+        rm.setInputFormat(dataset);
+        return Filter.useFilter(dataset, rm);
+    }
+    
     @Override
     public String toString(){
-        return dataset.toString(); //To change body of generated methods, choose Tools | Templates.
+        return new_data.toString(); //To change body of generated methods, choose Tools | Templates.
     }
     public String toStringFPGrowth(){
         return fpgrowth.toString();
