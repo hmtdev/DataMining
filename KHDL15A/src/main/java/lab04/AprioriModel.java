@@ -5,6 +5,11 @@
  */
 package lab04;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.FilterWriter;
+import java.io.IOException;
+import java.nio.file.Files;
 import weka.associations.Apriori;
 
 /**
@@ -24,6 +29,10 @@ public class AprioriModel extends PreProcessModel{
     }
     public String toStringRules(){
         return apriori.toString();
+    }
+    public void exportFileRules(String filename) throws IOException{
+    BufferedWriter bw = new BufferedWriter(new FileWriter(filename));
+    bw.write(this.toStringRules());
     }
      @Override
     public String toString() {

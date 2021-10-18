@@ -27,8 +27,10 @@ public class Main {
     System.out.println("=========================");
     String model_option = "-P 2 -I -1 -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1";
     model.mine_Model(model_option);
-        System.out.println(model.toStringRules());
-    
+    //System.out.println(model.toStringRules());
+    String file_paths = "E:\\data weka\\export\\b.txt";
+    model.exportFileRules(file_paths);
+        System.out.println("Oke chưa ");
     }
     
 }
