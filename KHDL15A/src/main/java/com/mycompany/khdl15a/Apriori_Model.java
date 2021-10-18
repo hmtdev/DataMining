@@ -51,13 +51,13 @@ public class Apriori_Model {
         as.setInstances(this.dataset);
         as.setFile(new File(path_file));
         as.writeBatch();
-    }
+    } //xong 
     public void exportToCSV(String path_file) throws IOException{
         CSVSaver cs = new CSVSaver();
         cs.setInstances(dataset);
         cs.setFile(new File(path_file));
         cs.writeBatch();
-    }
+    } // xong 
     @Override
     public String toString() {
         return dataset.toString(); //To change body of generated methods, choose Tools | Templates.

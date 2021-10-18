@@ -34,7 +34,7 @@ public class FPGrowth_Model {
     public void mine_AR(String model_opt, String data_opt) throws Exception{
         //this.new_data = convertNumericToNorminal(dataset, data_opt);
         this.model_option = weka.core.Utils.splitOptions(model_opt); // tachs thuoc tinh
-        this.new_data = removeByName(data_opt);
+        this.new_data = removeByName(dataset,data_opt);
         fpgrowth.setOptions(model_option);// set tham so
         fpgrowth.buildAssociations(new_data); // built thuat toan
     }   
@@ -45,18 +45,18 @@ public class FPGrowth_Model {
         num_to_nominal.setInputFormat(data);
         return Filter.useFilter(data, num_to_nominal); // bien doi 
     }
-    public Instances nomialtoBinomial(Instances data , String data_opt) throws Exception{
+    public Instances nomialtoBinomial(Instances data,String data_opt) throws Exception{
         this.data_option = weka.core.Utils.splitOptions(data_opt);
         NominalToBinary num_to_binary = new NominalToBinary();
         num_to_binary.setOptions(data_option);
         return Filter.useFilter(data, num_to_binary);
     }
-    public Instances removeByName(String data_opt) throws Exception{
+    public Instances removeByName(Instances data , String data_opt) throws Exception{
         this.data_option = weka.core.Utils.splitOptions(data_opt);
         RemoveByName rm = new RemoveByName();
         rm.setOptions(data_option);
-        rm.setInputFormat(dataset);
-        return Filter.useFilter(dataset, rm);
+        rm.setInputFormat(data);
+        return Filter.useFilter(data, rm);
     }
     
     @Override

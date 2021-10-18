@@ -5,6 +5,8 @@
  */
 package com.mycompany.khdl15a;
 
+import weka.core.Instances;
+
 /**
  *
  * @author TOAN
@@ -36,7 +38,8 @@ public class Apriori_TestModel {
         FPGrowth_Model fpgrowth = new FPGrowth_Model(data_paths);
         fpgrowth.mine_AR(model_opt,data_opt);
         
-        System.out.println(fpgrowth.toString());
+        System.out.println(fpgrowth.toStringFPGrowth());
+        
              
     }
     
