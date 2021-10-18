@@ -23,8 +23,11 @@ public class Main {
     //System.out.println(model.toString());
     String rm_option = "-E department[0-9]+";
     model.removeByName(rm_option);
-    System.out.println(model.toString());
+    //System.out.println(model.toString());
     System.out.println("=========================");
+    String model_option = "-P 2 -I -1 -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1";
+    model.mine_Model(model_option);
+        System.out.println(model.toStringRules());
     
     }
     
