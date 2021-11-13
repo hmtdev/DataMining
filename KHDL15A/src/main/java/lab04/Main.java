@@ -5,6 +5,9 @@
  */
 package lab04;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
 
 /**
  *
@@ -18,7 +21,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
     String data_paths ="C:\\Program Files\\Weka-3-8-5\\data\\supermarket.arff";
-    AprioriModel model= new AprioriModel();
+    AprioriModel model= new AprioriModel(); 
     model.load_data(data_paths);
     //System.out.println(model.toString());
     String rm_option = "-E department[0-9]+";
@@ -27,10 +30,12 @@ public class Main {
     System.out.println("=========================");
     String model_option = "-P 2 -I -1 -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1";
     model.mine_Model(model_option);
-    //System.out.println(model.toStringRules());
-    String file_paths = "E:\\data weka\\export\\b.txt";
-    model.exportFileRules(file_paths);
-        System.out.println("Oke chưa ");
+    System.out.println(model.toStringRules());
+    //String file_paths = "E:\\data weka\\export\\c.txt";
+    //model.exportFileRules(file_paths);
+    //System.out.println("Oke chua  ");
+    //String file_paths2 = "E:\\data weka\\export\\d.txt";
+    //    System.out.println("oke22");
     }
     
 }

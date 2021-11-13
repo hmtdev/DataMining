@@ -22,7 +22,7 @@ import weka.filters.unsupervised.attribute.RemoveByName;
  */
 public class PreProcessModel {
     DataSource dtsource;
-    Instances dataset;
+    Instances dataset,test_data;
     String[] data_option;
 
     public PreProcessModel() {
@@ -33,6 +33,10 @@ public class PreProcessModel {
     public void load_data(String filename) throws Exception{
         DataSource dtSource =  new DataSource(filename);
         this.dataset = dtSource.getDataSet();
+    }
+    public void load_data_test(String filename) throws Exception{
+        DataSource dtSource = new DataSource(filename);
+        this.test_data = dtSource.getDataSet();
     }
     public void exportToCSV(String path_file) throws IOException{
         CSVSaver cs = new CSVSaver();
@@ -65,8 +69,4 @@ public class PreProcessModel {
     public String toString() {
         return dataset.toString(); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
-
-    
 }

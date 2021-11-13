@@ -1,0 +1,51 @@
+@relation mushroom-weka.filters.unsupervised.instance.Resample-S1-Z10.0-weka.filters.unsupervised.instance.RemovePercentage-P30.0-V-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.instance.RemovePercentage-P10.0-V
+
+@attribute cap-shape {b,c,f,k,s,x}
+@attribute cap-surface {f,g,s,y}
+@attribute cap-color {b,c,e,g,n,p,r,u,w,y}
+@attribute bruises? {f,t}
+@attribute odor {a,c,f,l,m,n,p,s,y}
+@attribute gill-attachment {a,d,f,n}
+@attribute gill-spacing {c,d,w}
+@attribute gill-size {b,n}
+@attribute gill-color {b,e,g,h,k,n,o,p,r,u,w,y}
+@attribute stalk-shape {e,t}
+@attribute stalk-root {b,c,e,r,u,z}
+@attribute stalk-surface-above-ring {f,k,s,y}
+@attribute stalk-surface-below-ring {f,k,s,y}
+@attribute stalk-color-above-ring {b,c,e,g,n,o,p,w,y}
+@attribute stalk-color-below-ring {b,c,e,g,n,o,p,w,y}
+@attribute veil-type {p,u}
+@attribute veil-color {n,o,w,y}
+@attribute ring-number {n,o,t}
+@attribute ring-type {c,e,f,l,n,p,s,z}
+@attribute spore-print-color {b,h,k,n,o,r,u,w,y}
+@attribute population {a,c,n,s,v,y}
+@attribute habitat {d,g,l,m,p,u,w}
+@attribute class {e,p}
+
+@data
+x,f,w,f,n,f,w,b,n,t,e,s,s,w,w,p,w,o,e,n,s,g,e
+k,s,e,f,s,f,c,n,b,t,b,k,k,w,p,p,w,o,e,w,v,l,p
+x,y,w,t,a,f,c,b,n,e,c,s,s,w,w,p,w,o,p,k,s,m,e
+k,s,e,f,f,f,c,n,b,t,b,s,k,p,w,p,w,o,e,w,v,p,p
+f,y,n,f,m,a,c,b,y,e,c,k,y,c,c,p,w,n,n,w,c,d,e
+x,s,w,f,c,f,w,n,u,e,b,s,s,w,w,p,w,o,p,n,s,d,e
+x,y,e,f,s,f,c,n,b,t,b,k,s,p,w,p,w,o,e,w,v,d,p
+f,s,e,f,y,f,c,n,b,t,b,s,k,p,p,p,w,o,e,w,v,d,p
+k,y,n,f,y,f,c,n,b,t,b,k,k,w,p,p,w,o,e,w,v,d,p
+b,y,w,t,n,f,c,b,w,e,b,s,s,w,w,p,w,t,p,r,v,g,e
+b,y,y,t,a,f,c,b,k,e,c,s,s,w,w,p,w,o,p,n,s,m,e
+x,s,y,t,a,f,c,b,n,e,c,s,s,w,w,p,w,o,p,k,n,g,e
+b,y,y,t,a,f,c,b,k,e,c,s,s,w,w,p,w,o,p,n,s,m,e
+f,f,y,f,f,f,c,b,h,e,b,k,k,n,p,p,w,o,l,h,v,p,p
+x,y,n,t,n,f,c,b,w,t,b,s,s,g,p,p,w,o,p,n,v,d,e
+x,f,y,f,f,f,c,b,g,e,b,k,k,n,p,p,w,o,l,h,v,d,p
+f,s,n,f,y,f,c,n,b,t,b,k,k,p,p,p,w,o,e,w,v,p,p
+b,s,w,t,l,f,c,b,g,e,c,s,s,w,w,p,w,o,p,n,s,m,e
+k,y,b,t,n,f,c,b,e,e,b,s,s,e,w,p,w,t,e,w,c,w,e
+x,s,n,f,s,f,c,n,b,t,b,s,k,w,w,p,w,o,e,w,v,p,p
+x,y,g,t,n,f,c,b,n,t,b,s,s,g,g,p,w,o,p,k,v,d,e
+f,f,n,t,n,f,c,b,u,t,b,s,s,p,w,p,w,o,p,n,v,d,e
+x,y,n,t,n,f,c,b,p,t,b,s,s,g,p,p,w,o,p,k,y,d,e
+x,y,y,f,f,f,c,b,h,e,b,k,k,p,p,p,w,o,l,h,v,g,p
